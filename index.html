@@ -62,13 +62,24 @@
       background: black;
       position: absolute;
       top: 50%;
+      /* 100 % on the x-axis  */
+      transform-origin: 100%;
+      /* Starts clock at noon position */
+      transform: rotate(90deg);
+      /* Adds the realistic ticking feature */
+      transition: all 0.05s;
+      /* This is sick and should be used more often */
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
 
   </style>
 
   <script>
-
-
+      function setDate() {
+          console.log('Hi');
+      }
+    
+      setInterval(setDate, 1000);
   </script>
 </body>
 </html>
